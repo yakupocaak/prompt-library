@@ -53,7 +53,7 @@ const defaults=[
 {id:3,title:"Ürün Fotoğrafından AI Manken",category:"AI Image",description:"Moda ürününü gerçekçi bir AI model üzerinde göstermek için.",prompt:"Create a photorealistic fashion campaign image using the provided clothing product. The garment must remain exactly faithful to the reference: preserve fabric, cut, stitching, pattern, color and proportions. Place it naturally on a realistic fashion model. Premium studio photography, realistic skin texture, natural anatomy, soft commercial lighting, clean background, no plastic skin, no AI artifacts."},
 {id:4,title:"Seedance Sinematik Sahne",category:"Seedance",description:"Kamera hareketi ve karakter aksiyonunu kontrollü üretmek için.",prompt:"Create a cinematic photorealistic video. Preserve the reference composition, characters, environment and visual identity. The camera performs a smooth controlled cinematic movement while the characters perform natural continuous actions. Realistic body physics, natural facial motion, consistent lighting, stable background, no morphing, no extra limbs, no sudden camera cuts. Vertical 9:16."},
 {id:5,title:"Kling Gerçekçi Video",category:"Kling",description:"Gerçekçi hareket ve kamera kontrolü için.",prompt:"Generate a highly realistic cinematic video from the reference image. Keep the subject identity, clothing, environment and composition consistent. Natural human movement, realistic physics, subtle camera motion, physically accurate lighting and shadows. No identity changes, no object deformation, no flickering, no duplicated elements."},
-{id:6,title:"Nano Banana Ürün Düzenleme",category:"Nano Banana",description:"Ürünün kendisini bozmadan sahneyi değiştirmek için.",prompt:"Edit the provided image while preserving the exact product identity. Do not alter the product shape, packaging, logo, typography, colors or visible text. Change only the requested environment and composition. Maintain realistic perspective, shadows, reflections and lighting. Photorealistic commercial product photography."}
+{id:6,title:"Nano Banana Ürün Düzenleme",category:"Nano Banana",description:"Ürünün kendisini bozmadan sahneyi değiştirmek için.",prompt:"Edit the provided image while preserving the exact product identity. Do not alter the product shape, packaging, logo, typography, colors or visible text. Change only the requested environment and composition. Maintain realistic perspective, shadows, reflections and lighting. Photorealistic commercial product photography."},
 {id:7,title:"Storm Akımı",category:"Seedance",description:"Referans videonun hareket, kamera ve koreografisini koruyarak ana karakteri çocukla, kalabalığı antropomorfik karakterlerle ve sigarayı lollipop ile değiştiren video promptu.",prompt:`Use the uploaded reference video as the master reference for the entire video.
 Preserve the reference video's original shot sequence, camera movement, framing, lens perspective, timing, pacing, choreography, blocking, walking path, body movements, background, lighting, composition and overall visual style.
 
@@ -102,7 +102,7 @@ The final result should feel like the original reference video with only:
 - the human crowd replaced by the uploaded anthropomorphic cartoon characters`},
 ];
 
-let prompts=JSON.parse(localStorage.getItem("yakup_prompts")||"null")||defaults;
+let prompts=defaults;
 let current=null;
 const categories=["Tümü",...new Set(prompts.map(x=>x.category))];
 let active="Tümü";
