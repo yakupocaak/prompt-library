@@ -54,6 +54,52 @@ const defaults=[
 {id:4,title:"Seedance Sinematik Sahne",category:"Seedance",description:"Kamera hareketi ve karakter aksiyonunu kontrollü üretmek için.",prompt:"Create a cinematic photorealistic video. Preserve the reference composition, characters, environment and visual identity. The camera performs a smooth controlled cinematic movement while the characters perform natural continuous actions. Realistic body physics, natural facial motion, consistent lighting, stable background, no morphing, no extra limbs, no sudden camera cuts. Vertical 9:16."},
 {id:5,title:"Kling Gerçekçi Video",category:"Kling",description:"Gerçekçi hareket ve kamera kontrolü için.",prompt:"Generate a highly realistic cinematic video from the reference image. Keep the subject identity, clothing, environment and composition consistent. Natural human movement, realistic physics, subtle camera motion, physically accurate lighting and shadows. No identity changes, no object deformation, no flickering, no duplicated elements."},
 {id:6,title:"Nano Banana Ürün Düzenleme",category:"Nano Banana",description:"Ürünün kendisini bozmadan sahneyi değiştirmek için.",prompt:"Edit the provided image while preserving the exact product identity. Do not alter the product shape, packaging, logo, typography, colors or visible text. Change only the requested environment and composition. Maintain realistic perspective, shadows, reflections and lighting. Photorealistic commercial product photography."}
+{id:7,title:"Storm Akımı",category:"Seedance",description:"Referans videonun hareket, kamera ve koreografisini koruyarak ana karakteri çocukla, kalabalığı antropomorfik karakterlerle ve sigarayı lollipop ile değiştiren video promptu.",prompt:`Use the uploaded reference video as the master reference for the entire video.
+Preserve the reference video's original shot sequence, camera movement, framing, lens perspective, timing, pacing, choreography, blocking, walking path, body movements, background, lighting, composition and overall visual style.
+
+Make ONLY these three changes:
+
+1. Replace the cigarette action in the opening with a colorful lollipop.
+The main character naturally holds the lollipop, brings it to his mouth once, briefly sucks it once, then lowers it.
+Do not add any other prop or action.
+
+2. Replace the original main character with the child shown in the uploaded character reference image.
+Keep the child's face, hairstyle, clothing, body proportions and overall appearance consistent throughout the entire video.
+
+3. Replace every person in the crowd with the anthropomorphic cartoon characters shown in the uploaded crowd reference image.
+Every crowd member must remain the same type of anthropomorphic cartoon animal throughout the entire video.
+
+IMPORTANT PERFORMANCE RULES:
+
+The child must follow the reference video's original movement exactly.
+He must walk in the same direction, along the same path, at the same pace and with the same body movement as the original main character.
+The child must NOT walk backwards.
+The child must NOT stop in front of the crowd.
+The child must continue walking naturally until he reaches the same position within the crowd as the original main character.
+The child does NOT dance.
+The child does NOT perform the crowd choreography.
+After reaching his position, he remains in his position exactly as the original main character does in the reference video.
+
+Only the crowd performs the synchronized dance movements from the reference video.
+
+All crowd characters must remain cool, serious and confident.
+No smiling, no laughing, no exaggerated facial expressions, no playful expressions.
+The crowd must remain anthropomorphic animals at all times.
+No crowd member may become, transform into, or resemble a human.
+No human faces, human bodies or human characters are allowed in the crowd.
+
+Do not change the number or arrangement of the crowd unnecessarily.
+Do not create a new scene.
+Do not invent new movements.
+Do not change the walking direction.
+Do not add camera movements.
+Do not add transitions.
+Do not alter the original sequence.
+
+The final result should feel like the original reference video with only:
+- the cigarette replaced by one brief lollipop action
+- the main character replaced by the child
+- the human crowd replaced by the uploaded anthropomorphic cartoon characters`},
 ];
 
 let prompts=JSON.parse(localStorage.getItem("yakup_prompts")||"null")||defaults;
