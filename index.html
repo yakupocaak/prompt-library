@@ -101,7 +101,6 @@ The final result should feel like the original reference video with only:
 - the main character replaced by the child
 - the human crowd replaced by the uploaded anthropomorphic cartoon characters`},
 ];
-
 let prompts=JSON.parse(localStorage.getItem("yakup_prompts")||"null")||defaults;
 let current=null;
 const categories=["Tümü",...new Set(prompts.map(x=>x.category))];
